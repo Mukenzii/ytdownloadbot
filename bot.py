@@ -15,7 +15,7 @@ bot = TeleBot(CONFIG)
 
 @bot.message_handler(commands=['start'])
 def reaction_start(message: Message):
-    chat_id = message.from_user.id
+    chat_id = message.chat.id
     first_name = message.from_user.full_name
     username = message.from_user.username
     bot.send_message(ADMIN,
